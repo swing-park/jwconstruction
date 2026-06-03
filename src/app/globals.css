@@ -1,0 +1,52 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-white text-brand-body font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-brand-dark font-semibold;
+    line-height: 1.3;
+  }
+}
+
+@layer utilities {
+  /* 스크롤바 숨김 (썸네일 슬라이더용) */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 최대 콘텐츠 폭 + 가운데 정렬 */
+  .container-content {
+    @apply max-w-content mx-auto px-5 md:px-10 lg:px-16;
+  }
+
+  /* 섹션 상하 여백 */
+  .section-padding {
+    @apply py-16 lg:py-28;
+  }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}
