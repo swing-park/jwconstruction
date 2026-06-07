@@ -13,6 +13,17 @@ export interface Project {
 
 export const residentialProjects: Project[] = [
   {
+    id: "res-018",
+    category: "residential",
+    title: "상계동 단독주택 방 확장 리모델링",
+    size: "10평 이하",
+    location: "서울 노원구",
+    description:
+      "깔끔하고 확장된 아늑한 공간으로 완성된 노원구 상계동 단독주택 방 확장 리모델링을 소개합니다.\n\n기존 석고블록 가벽을 철거해 분리되었던 방을 다시 하나로 합치고, 실크 벽지로 한층 고급스러운 무드를 완성했어요.\n\n가벽에 가려졌던 우측 창문을 살리기 위해 석고보드로 단차를 맞추고, 양 창문 모두 6전 평몰딩으로 테두리를 마감했습니다. 마이너스 몰딩과 6전 걸레받이로 깔끔하게 정리하고, 바닥은 좀 더 푹신하게 다닐 수 있도록 3.2T 장판으로 시공했어요. 노후 방충망은 새 공간에 맞게 교체하고 가려졌던 창문 쪽에는 스텐 방범창을 설치했으며, 방 문은 초슬림 슬라이딩 두짝문으로 기존 공간에 깔끔하게 어울리도록 마무리했습니다.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/residential/res-018/4.jpg",
+    imageCount: 6,
+  },
+  {
     id: "res-017",
     category: "residential",
     title: "오남리 유호아파트 34평인테리어 전체 리모델링",
