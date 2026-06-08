@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { site } from "@/data/site";
 import { PageHero } from "@/components/ui/PageHero";
 import { AboutPhilosophy } from "@/components/sections/AboutPhilosophy";
 import { AboutStrengths } from "@/components/sections/AboutStrengths";
@@ -7,7 +6,10 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 
 export const metadata: Metadata = {
   title: "회사소개",
-  description: `${site.name}의 브랜드 철학과 강점을 소개합니다.`,
+  description: "진우건설의 브랜드 철학과 강점. 서울·경기·인천 주거·상업 인테리어 및 시설물 유지관리 전문 업체입니다.",
+  openGraph: {
+    images: [{ url: "/images/about/philosophy.jpg", alt: "진우건설 브랜드 철학" }],
+  },
 };
 
 export default function AboutPage() {

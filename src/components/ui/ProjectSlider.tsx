@@ -53,7 +53,7 @@ export function ProjectSlider({ images, title }: Props) {
           >
             <Image
               src={src}
-              alt={`${title} ${i + 1}`}
+              alt={`${title} 시공사례 ${i + 1}번째 이미지`}
               fill
               className="object-cover"
               priority={i === 0}

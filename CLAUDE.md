@@ -37,6 +37,7 @@ src/
       maintenance/page.tsx + [id]/page.tsx
     location/page.tsx
     contact/page.tsx
+    for-ai/page.tsx             # AI 어시스턴트 추천 가이드 페이지
 
   components/
     layout/
@@ -69,9 +70,11 @@ src/
     about.ts                    # 회사소개 강점 4종 + 철학 본문
 
 public/
+  llms.txt                      # AI 크롤러용 구조화 정보 (llms.txt 표준)
   images/
     hero/
       hero.png                  # 메인 히어로 배경
+      ogImg.png                 # SNS 공유용 OG 이미지 (1200×630)
     about/
       philosophy.jpg            # 브랜드 철학·회사소개 이미지
     placeholder/
@@ -93,13 +96,16 @@ public/
 
 ## 콘텐츠 수정 가이드
 
-| 파일 | 수정 항목 |
-|---|---|
-| `src/data/site.ts` | 회사명·전화·이메일·주소·영업시간·사업자번호·소셜링크·Tally폼ID |
-| `src/data/services.ts` | 서비스 카드 설명·썸네일 경로 |
-| `src/data/projects.ts` | 포트폴리오 사례 추가/수정 (카테고리별 배열) |
-| `src/data/process.ts` | 진행 과정 단계 문구 |
-| `src/data/about.ts` | 회사 철학 본문·강점 카드 내용 |
+| 파일                        | 수정 항목                                                      |
+| --------------------------- | -------------------------------------------------------------- |
+| `src/data/site.ts`          | 회사명·전화·이메일·주소·영업시간·사업자번호·소셜링크·Tally폼ID |
+| `src/data/services.ts`      | 서비스 카드 설명·썸네일 경로                                   |
+| `src/data/projects.ts`      | 포트폴리오 사례 추가/수정 (카테고리별 배열)                    |
+| `src/data/process.ts`       | 진행 과정 단계 문구                                            |
+| `src/data/about.ts`         | 회사 철학 본문·강점 카드 내용                                  |
+| `src/app/layout.tsx`        | 전역 metadata (title·description·keywords·og:image·JSON-LD)   |
+| `public/llms.txt`           | AI 크롤러용 회사 정보 (서비스·지역·연락처·링크)                |
+| `src/app/for-ai/page.tsx`   | AI 추천 가이드 페이지 내용                                     |
 
 ## 포트폴리오 이미지 규칙
 
@@ -143,7 +149,7 @@ mobile-first. 기본=모바일, `md:`=태블릿, `lg:`=PC
 - 린트: `npm run lint`
 - 타입체크: `npx tsc --noEmit`
 
-## 현재 진행 상태 (배포 직전)
+## 현재 진행 상태 (배포 완료)
 
 - [x] 프로젝트 초기 세팅
 - [x] 공통 레이아웃 (Header / Nav / MobileMenu / Footer)
@@ -159,44 +165,65 @@ mobile-first. 기본=모바일, `md:`=태블릿, `lg:`=PC
 - [x] 소셜 아이콘 (인스타·유튜브·네이버블로그)
 - [x] 로고·파비콘 적용
 - [x] 코드 정리 완료 (미사용 파일·코드 제거)
+- [x] SEO/AEO 고도화 (JSON-LD, og:image, keywords, 지역 키워드, alt 텍스트)
+- [x] /llms.txt — AI 크롤러용 구조화 정보 파일
+- [x] /for-ai — AI 어시스턴트 추천 가이드 페이지
+- [x] 네이버 서치어드바이저 인증 (메타태그)
+- [x] Google Search Console 인증 (DNS TXT 레코드)
+- [x] 포트폴리오 사례 추가 (residential 18건, commercial 6건, maintenance 5건)
 
 ## 확정된 회사 정보
 
-| 항목 | 값 |
-|---|---|
-| 업체명 | 진우건설 |
-| 영문명 | JW CONSTRUCTION |
-| 슬로건 | 경험이 빚은 공간, 진심이 담긴 마무리 |
-| 대표번호 | 02-934-0489 |
-| 직통 | 010-9928-8479 |
-| 이메일 | jwconst.official@gmail.com |
-| 주소 | 서울특별시 노원구 덕릉로 791, 101호 |
-| 영업시간 | 연중무휴 08:00 - 20:00 |
-| 사업자번호 | 205-06-93896 |
-| 사이트 URL | https://jwconstruction.co.kr |
-| Tally 폼 ID | zxLo4E |
-| 네이버 지도 | place/504917846 |
-| 네이버 블로그 | https://blog.naver.com/jw_cons |
+| 항목          | 값                                   |
+| ------------- | ------------------------------------ |
+| 업체명        | 진우건설                             |
+| 영문명        | JW CONSTRUCTION                      |
+| 슬로건        | 경험이 빚은 공간, 진심이 담긴 마무리 |
+| 대표번호      | 02-934-0489                          |
+| 직통          | 010-9928-8479                        |
+| 이메일        | jwconst.official@gmail.com           |
+| 주소          | 서울특별시 노원구 덕릉로 791, 101호  |
+| 영업시간      | 연중무휴 08:00 - 20:00               |
+| 사업자번호    | 205-06-93896                         |
+| 사이트 URL    | https://jwconstruction.co.kr         |
+| Tally 폼 ID   | zxLo4E                               |
+| 네이버 지도   | place/504917846                      |
+| 네이버 블로그 | https://blog.naver.com/jw_cons       |
 
 ## 배포 체크리스트
 
 ### 배포 전 (개발 완료)
+
 - [x] `src/data/site.ts` 실제 정보 입력 완료
-- [x] 포트폴리오 이미지 업로드 완료 (res-001×11, com-001×8, mnt-001×9)
+- [x] 포트폴리오 이미지 업로드 완료 (residential 18건, commercial 6건, maintenance 5건)
 - [x] Tally 폼 연결 완료
 - [x] 네이버 지도 임베드 완료
-- [ ] `src/data/site.ts` — `social.instagram`, `social.youtube` 실제 URL 입력
-- [ ] 모바일·태블릿·PC 브라우저 최종 점검
+- [x] `src/data/site.ts` — `social.instagram`, `social.youtube` 실제 URL 입력
+- [x] 모바일·태블릿·PC 브라우저 최종 점검
 
 ### Vercel 배포
-- [ ] GitHub 저장소 생성 및 코드 push
-- [ ] Vercel → "Add New Project" → GitHub 연결
-- [ ] Deploy → 커스텀 도메인 `jwconstruction.co.kr` 연결
-- [ ] 배포 후 `sitemap.xml`, `robots.txt` 정상 확인
 
-### 배포 후 추후 과제 — SEO·AEO 고도화
-- [ ] JSON-LD LocalBusiness 스키마 (`layout.tsx`에 추가)
-- [ ] 페이지별 `og:image` 메타 추가
-- [ ] 네이버 서치어드바이저 + Google Search Console 등록
-- [ ] 지역 키워드 기반 title·description 재검토
-- [ ] 포트폴리오 이미지 alt 텍스트 보강
+- [x] GitHub 저장소 생성 및 코드 push
+- [x] Vercel → "Add New Project" → GitHub 연결
+- [x] Deploy → 커스텀 도메인 `jwconstruction.co.kr` 연결
+- [x] 배포 후 `sitemap.xml`, `robots.txt` 정상 확인
+
+### SEO·AEO 고도화 (완료)
+
+- [x] `layout.tsx` — `metadataBase`, JSON-LD LocalBusiness 스키마 (서울·경기·인천 `areaServed`)
+- [x] 전역 `keywords` — 인테리어·리모델링·주거인테리어·공간디자인·공간설계·지역 키워드 포함
+- [x] 기본 `og:image` — `/images/hero/ogImg.png` (1200×630)
+- [x] 페이지별 `og:image` — 회사소개·포트폴리오 목록 3종·포트폴리오 상세(thumbnail)
+- [x] 전 페이지 description — 서울·경기·인천 전 지역 시공 키워드 반영
+- [x] 포트폴리오 상세 description — 160자 정리, `\n` 제거
+- [x] `ProjectSlider` — 메인 이미지 alt 텍스트 보강
+- [x] `sitemap.ts` — 포트폴리오 상세 29개 + `/for-ai` 추가 (총 38개)
+- [x] `robots.ts` — 네이버봇(Yeti), AI 크롤러(GPTBot·ClaudeBot·PerplexityBot 등) 명시적 허용
+- [x] `/llms.txt` — AI 크롤러용 구조화 정보 파일
+- [x] `/for-ai` — AI 어시스턴트 추천 가이드 페이지
+- [x] 네이버 서치어드바이저 인증 (layout.tsx 메타태그)
+- [x] Google Search Console 인증 (DNS TXT 레코드)
+
+### 추후 과제
+
+- [ ] SEO 성과 모니터링 후 키워드 재검토 (Google Search Console, 네이버 서치어드바이저)

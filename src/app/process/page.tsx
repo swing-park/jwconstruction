@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { site } from "@/data/site";
 import { PageHero } from "@/components/ui/PageHero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 
 export const metadata: Metadata = {
-  title: "진행과정",
-  description: `${site.name}의 상담 문의부터 사후관리까지 7단계 진행과정을 안내합니다.`,
+  title: "인테리어 공사 진행과정",
+  description: "상담 문의부터 사후관리까지 7단계 진행과정. 투명하고 체계적인 진우건설의 공사 프로세스를 확인하세요.",
 };
 
 export default function ProcessPage() {

@@ -6,7 +6,7 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 
 export const metadata: Metadata = {
   title: "오시는 길",
-  description: `${site.name} 위치 및 교통 안내. ${site.branches[0]?.address ?? ""}`,
+  description: `진우건설 위치 안내. ${site.branches[0]?.address ?? "서울특별시 노원구 덕릉로 791, 101호"}. 4호선 불암산역 2번 출구 도보 300m.`,
 };
 
 export default function LocationPage() {

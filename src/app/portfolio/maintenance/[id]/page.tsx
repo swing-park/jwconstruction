@@ -10,11 +10,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { id: string } }): Metadata {
   const project = maintenanceProjects.find((p) => p.id === params.id);
   if (!project) return {};
+  const raw = [project.location, project.size, project.description.replace(/\n+/g, " ")].filter(Boolean).join(" · ");
+  const description = raw.length > 160 ? raw.slice(0, 157) + "..." : raw;
   return {
     title: project.title,
-    description: [project.size, project.location, project.description]
-      .filter(Boolean)
-      .join(" · "),
+    description,
+    openGraph: { images: [{ url: project.thumbnail, alt: project.title }] },
   };
 }
 

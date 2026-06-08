@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: `${site.name} | ${site.slogan}`,
-  description: `${site.name}은 주거·상업 인테리어 및 시설물 유지관리 전문 업체입니다. ${site.subSlogan}`,
+  description: "주거·상업 인테리어 및 시설물 유지관리 전문. 서울·경기·인천 전 지역 시공 가능. 기초부터 마감까지 책임과 정성을 다합니다.",
 };
 
 export default function HomePage() {
