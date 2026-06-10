@@ -170,7 +170,7 @@ mobile-first. 기본=모바일, `md:`=태블릿, `lg:`=PC
 - [x] /for-ai — AI 어시스턴트 추천 가이드 페이지
 - [x] 네이버 서치어드바이저 인증 (메타태그)
 - [x] Google Search Console 인증 (DNS TXT 레코드)
-- [x] 포트폴리오 사례 추가 (residential 18건, commercial 6건, maintenance 5건)
+- [x] 포트폴리오 사례 추가 (residential 19건, commercial 6건, maintenance 5건)
 
 ## 확정된 회사 정보
 
@@ -195,7 +195,7 @@ mobile-first. 기본=모바일, `md:`=태블릿, `lg:`=PC
 ### 배포 전 (개발 완료)
 
 - [x] `src/data/site.ts` 실제 정보 입력 완료
-- [x] 포트폴리오 이미지 업로드 완료 (residential 18건, commercial 6건, maintenance 5건)
+- [x] 포트폴리오 이미지 업로드 완료 (residential 19건, commercial 6건, maintenance 5건)
 - [x] Tally 폼 연결 완료
 - [x] 네이버 지도 임베드 완료
 - [x] `src/data/site.ts` — `social.instagram`, `social.youtube` 실제 URL 입력
