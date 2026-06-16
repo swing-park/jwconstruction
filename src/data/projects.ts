@@ -288,6 +288,16 @@ export const commercialProjects: Project[] = [
 
 export const maintenanceProjects: Project[] = [
   {
+    id: "mnt-006",
+    category: "maintenance",
+    title: "동숭동 단독주택 창문 빗물막이 차양막 공사",
+    location: "서울 종로구",
+    description:
+      "튼튼하고 빈틈없이 완성된 종로구 동숭동 단독주택 창문 빗물막이 차양막 공사를 소개합니다.\n\n차양막 없이 노출되어 비가 올 때마다 빗물이 직접 유입되던 창문에, 내구성이 뛰어난 브라운 톤 폴리카보네이트(렉산) 차양막을 설치해 외관과 자연스럽게 어우러지도록 마무리했어요.\n\n길이와 수평을 정밀하게 계산한 뒤 앙카 드릴로 고정점을 잡고 화스너를 단단하게 시공하고, 그 위에 렉산 차양막을 올려 피스로 견고하게 고정했습니다. 설치 후 창문과 차양막 사이 틈새는 외부용 고급 실리콘으로 꼼꼼하게 마감해 빗물 유입을 완벽하게 차단했어요. 내구성 좋은 렉산 소재로 튼튼함을 챙기고, 실리콘 마감까지 빈틈없이 더해 깔끔하게 시공을 완료했습니다.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/maintenance/mnt-006/6.jpg",
+    imageCount: 7,
+  },
+  {
     id: "mnt-005",
     category: "maintenance",
     title: "상계동 지하 노래방 바닥 꺼짐 보수 공사",
