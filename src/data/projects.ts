@@ -332,6 +332,16 @@ export const commercialProjects: Project[] = [
 
 export const maintenanceProjects: Project[] = [
   {
+    id: "mnt-008",
+    category: "maintenance",
+    title: "명동성당 차양막 설치 공사",
+    location: "서울 중구",
+    description:
+      "안전하고 꼼꼼하게 완성된 중구 명동성당 차양막 설치 공사를 소개합니다.\n\n차양막의 뼈대가 되는 파이프 기둥과 지붕 틀을 튼튼하게 제작해 안전하고 견고한 기초를 다지고, 내구성과 채광성이 뛰어난 폴리카보네이트 지붕으로 차양막을 완성했어요.\n\n지붕 처짐을 방지하기 위해 석재 난간에 아이볼트를 고정하고 와이어와 턴버클로 구조물을 단단하게 잡아, 역사적인 건축물인 만큼 안전성에 특히 신경 써서 시공했습니다. 폴리카보네이트 지붕재가 올라갈 프레임은 수평과 간격을 꼼꼼하게 맞춰 정밀하게 설치해 마감 완성도를 높이고, 앞쪽 바닥 천정과 유사하게 작업해 미관상 통일감까지 챙겼어요. 기둥 제작부터 폴리카보네이트 지붕까지 안전하고 꼼꼼하게 마무리했습니다.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/maintenance/mnt-008/1.jpg",
+    imageCount: 8,
+  },
+  {
     id: "mnt-007",
     category: "maintenance",
     title: "중계동 중계주공8단지 상가건물 옥상 방수 공사",
