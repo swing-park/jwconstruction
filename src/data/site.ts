@@ -34,7 +34,7 @@ export const site = {
     },
   ] as Branch[],
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/jwconst.official/",
     youtube: "",
     blog: "https://blog.naver.com/jw_cons",
   },

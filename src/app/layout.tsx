@@ -56,7 +56,7 @@ const jsonLd = {
       closes: "20:00",
     },
   ],
-  sameAs: [site.social.blog].filter(Boolean),
+  sameAs: [site.social.instagram, site.social.blog].filter(Boolean),
 };
 
 export default function RootLayout({

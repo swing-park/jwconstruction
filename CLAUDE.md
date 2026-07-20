@@ -198,7 +198,7 @@ mobile-first. 기본=모바일, `md:`=태블릿, `lg:`=PC
 - [x] 포트폴리오 이미지 업로드 완료 (residential 23건, commercial 6건, maintenance 8건)
 - [x] Tally 폼 연결 완료
 - [x] 네이버 지도 임베드 완료
-- [x] `src/data/site.ts` — `social.instagram`, `social.youtube` 실제 URL 입력
+- [x] `src/data/site.ts` — `social.instagram` 활성화 (https://www.instagram.com/jwconst.official/), `social.youtube` 미설정
 - [x] 모바일·태블릿·PC 브라우저 최종 점검
 
 ### Vercel 배포
