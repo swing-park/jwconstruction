@@ -354,6 +354,16 @@ export const commercialProjects: Project[] = [
 
 export const maintenanceProjects: Project[] = [
   {
+    id: "mnt-009",
+    category: "maintenance",
+    title: "고등학교 차양막 설치,수전 세트 교체,도어락 교체",
+    location: "수원시 장안구",
+    description:
+      "차양막부터 수전, 도어락까지 꼼꼼하게 완성된 수원시 장안구 고등학교 시설물 유지관리 공사를 소개합니다.\n\n브라운 폴리카보네이트(렉산) 차양막으로 출입문 빗물 유입을 차단하고, 노후된 수전 세트와 고장 난 도어락까지 한 번에 정리해 쾌적하고 안전한 환경으로 마무리했어요.\n\n차양막은 길이와 수평을 정밀하게 계산한 뒤 앙카와 화스너로 견고하게 고정하고, 틈새는 외부용 실리콘으로 마감해 빈틈없이 완성했습니다. 세면대는 수전·팝업·트랩·조절밸브까지 총 16세트를 새것으로 교체해 누수 걱정 없이 오래 사용할 수 있도록 하고, 문 잠김 고장이 발생한 기존 강화유리 도어락은 철거 후 새 제품으로 교체해 안전하고 편리한 출입 환경으로 정리했어요.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/maintenance/mnt-009/2.jpg",
+    imageCount: 12,
+  },
+  {
     id: "mnt-008",
     category: "maintenance",
     title: "명동성당 차양막 설치 공사",
