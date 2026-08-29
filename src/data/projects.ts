@@ -354,6 +354,16 @@ export const commercialProjects: Project[] = [
 
 export const maintenanceProjects: Project[] = [
   {
+    id: "mnt-010",
+    category: "maintenance",
+    title: "고등학교 강당 천정 보수 공사",
+    location: "수원시 장안구",
+    description:
+      "철거부터 마감까지 꼼꼼하게 완성된 수원시 장안구 고등학교 강당 천정 보수 공사를 소개합니다.\n\n전기 작업 중 발생한 천정 파손 부위를 석고보드 교체와 조색 페인트 마감으로 주변 천정과 자연스럽게 어우러지도록 감쪽같이 복구했어요.\n\n먼저 천정이 석고 보드와 페인트 마감임을 확인해 작업에 반영하고, 새 석고보드 설치를 위해 주변 손상을 최소화하며 석고 한 장 부분만 철거했습니다. 기존 천정에 다루끼 상을 추가로 설치한 뒤 석고보드로 마무리하고, 틈새는 핸디코트로 채워 단차를 없애 페인트 마감이 용이하도록 준비했어요. 퍼티 작업한 면을 사포질로 매끈하게 잡은 뒤 주변 천정 색과 비슷하게 조색해 페인트로 마감하고, 조명 설치까지 더해 깔끔하게 마무리했습니다.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/maintenance/mnt-010/2.jpg",
+    imageCount: 4,
+  },
+  {
     id: "mnt-009",
     category: "maintenance",
     title: "고등학교 차양막 설치,수전 세트 교체,도어락 교체",
