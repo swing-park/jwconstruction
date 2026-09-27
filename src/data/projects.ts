@@ -13,6 +13,17 @@ export interface Project {
 
 export const residentialProjects: Project[] = [
   {
+    id: "res-029",
+    category: "residential",
+    title: "상계동 수락파크빌 43평인테리어 화장실 리모델링",
+    size: "43평",
+    location: "서울 노원구",
+    description:
+      "깔끔하고 세련된 그레이 톤으로 완성된 노원구 상계동 수락파크빌 43평 화장실 리모델링을 소개합니다.\n\n2001년 준공된 생활감 밴 공간의 거실·안방 화장실을 전체 철거하고, 기존 타일 위에 그레이 톤 타일을 덧방으로 시공해 깔끔하고 세련된 무드로 탈바꿈시켰어요.\n\n공사 중 발생하는 먼지와 오염으로부터 생활 공간을 철저하게 보호하기 위해 보양 작업을 먼저 진행하고, 거실·안방 화장실 전체를 철거한 뒤 젠다이를 조적해 수납과 마감의 기초를 다졌습니다. 기존 타일 위에 그레이 톤 타일을 덧방으로 시공해 공간을 넓고 세련되게 연출하고, 전체 철거 후 모든 부속품 설치까지 꼼꼼하게 마무리했어요.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/residential/res-029/1.jpg",
+    imageCount: 7,
+  },
+  {
     id: "res-028",
     category: "residential",
     title: "공릉동 비선아파트 21평인테리어 전체 리모델링",
