@@ -8,7 +8,7 @@ export function CtaBanner() {
       {/* 배경 이미지 */}
       <Image
         src="/images/placeholder/contact-section.png"
-        alt=""
+        alt="진우건설 시공현장"
         fill
         className="object-cover"
       />

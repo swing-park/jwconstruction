@@ -110,7 +110,7 @@ export function ProjectSlider({ images, title }: Props) {
                   : "opacity-50 hover:opacity-80"
               }`}
             >
-              <Image src={src} alt="" fill className="object-cover" />
+              <Image src={src} alt={`${title} ${i + 1}번째 썸네일`} fill className="object-cover" />
             </button>
           ))}
         </div>

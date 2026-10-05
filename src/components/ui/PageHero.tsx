@@ -12,7 +12,7 @@ export function PageHero({ titleEn, titleKo, description }: PageHeroProps) {
       {/* 배경 이미지 */}
       <Image
         src="/images/placeholder/page-hero.png"
-        alt=""
+        alt="진우건설 시공현장 배경"
         fill
         className="object-cover"
         priority
