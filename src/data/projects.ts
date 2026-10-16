@@ -368,6 +368,16 @@ export const residentialProjects: Project[] = [
 
 export const commercialProjects: Project[] = [
   {
+    id: "com-007",
+    category: "commercial",
+    title: "문정동 사무실 실내창·유리칸막이 공사",
+    location: "서울 송파구",
+    description:
+      "소통하기 좋고 탁 트인 공간으로 완성된 송파구 문정동 사무실 실내창·유리칸막이 공사를 소개합니다.\n\n가벽으로 막혀 답답했던 기존 사무 공간을 오픈형 실내창과 스테인리스 프레임 유리칸막이로 탈바꿈시켜 채광과 개방감을 한층 높였어요.\n\n기존 가벽 일부를 철거하고 목공 마감으로 오픈형 실내창을 제작해, 벽으로 막혀있던 공간이 자연스럽게 연결되면서 소통하기 편한 업무 환경으로 바뀌었습니다. 회의실은 스테인리스 프레임 유리칸막이로 깔끔하게 분리해, 유리 특유의 개방감을 살리면서도 독립된 회의 공간을 확보해 업무 집중도와 미감을 함께 높였어요. 보양부터 현장 상황에 따른 유동적인 시공까지 꼼꼼하게 진행해 탁 트인 사무실로 완성했습니다.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/commercial/com-007/4.jpg",
+    imageCount: 10,
+  },
+  {
     id: "com-006",
     category: "commercial",
     title: "상계동 더숲 북카페 공간 디자인",
