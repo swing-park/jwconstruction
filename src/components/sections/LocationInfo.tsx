@@ -18,42 +18,43 @@ export function LocationInfo() {
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 lg:gap-12">
               {/* 지도 */}
-              <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[400px] bg-brand-offwhite overflow-hidden order-2 lg:order-1">
-                {branch.mapEmbedUrl ? (
-                  <>
-                    <iframe
-                      src={branch.mapEmbedUrl}
-                      title={`${branch.name} 지도`}
-                      width="100%"
-                      height="100%"
-                      className="absolute inset-0 w-full h-full border-0"
-                      loading="lazy"
-                      allow="geolocation"
-                    />
-                    {branch.mapUrl && (
-                      <a
-                        href={branch.mapUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs bg-white text-brand-dark rounded-md shadow-sm hover:bg-brand-offwhite transition-colors"
-                      >
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M6 1C4 1 2.5 2.5 2.5 4.5c0 3 3.5 6.5 3.5 6.5s3.5-3.5 3.5-6.5C9.5 2.5 8 1 6 1z"/>
-                          <circle cx="6" cy="4.5" r="1.2"/>
-                        </svg>
+              <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[400px] overflow-hidden order-2 lg:order-1">
+                <a
+                  href={branch.mapUrl ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group absolute inset-0 flex flex-col items-center justify-center gap-6 bg-[#EEF0EB]"
+                  aria-label="네이버 지도에서 위치 확인"
+                >
+                  {/* 격자 패턴 배경 */}
+                  <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#888" strokeWidth="0.5"/>
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                  </svg>
+
+                  {/* 핀 아이콘 */}
+                  <div className="relative z-10 flex flex-col items-center gap-4">
+                    <div className="w-14 h-14 rounded-full bg-[#03C75A] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="white"/>
+                        <circle cx="12" cy="9" r="2.5" fill="#03C75A"/>
+                      </svg>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm font-medium text-gray-700">{branch.address}</p>
+                      <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-[#03C75A] font-semibold group-hover:underline">
                         네이버 지도에서 보기
-                      </a>
-                    )}
-                  </>
-                ) : (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-brand-muted">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 3C12.5 3 8 7.5 8 13c0 8 10 20 10 20s10-12 10-20c0-5.5-4.5-10-10-10z" />
-                      <circle cx="18" cy="13" r="3.5" />
-                    </svg>
-                    <p className="text-sm">지도 영역</p>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M2.5 6h7M6.5 3l3 3-3 3"/>
+                        </svg>
+                      </p>
+                    </div>
                   </div>
-                )}
+                </a>
               </div>
 
               {/* 정보 패널 */}
