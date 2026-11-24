@@ -485,6 +485,16 @@ export const commercialProjects: Project[] = [
 
 export const maintenanceProjects: Project[] = [
   {
+    id: "mnt-011",
+    category: "maintenance",
+    title: "중계동 중계주공8단지 상가 계단 보수 공사",
+    location: "서울 노원구",
+    description:
+      "안전하고 튼튼하게 완성된 노원구 중계동 중계주공8단지 상가 계단 보수 공사를 소개합니다.\n\n노후되어 부서지고 흔들리던 계단을 논슬립 보강과 동자 교체로 안전하고 튼튼하게 보수했어요.\n\n✅ 석재 에폭시 본드로 단단히 고정한 논슬립 보수\n\n논슬립 보수 전 석재 에폭시 본드로 보강을 진행했습니다. 단단히 고정하여 안전하게 설치했어요.\n\n✅ 부서진 동자를 새 동자로 용접해 다시 세운 보수\n\n부서진 동자를 철거한 후 새로운 동자를 용접하여 시공했습니다. 노후된 부분을 제거한 후 안전하고 튼튼하게 보수를 완료했어요.\n\n이 프로젝트와 비슷한 공간을 고민하고 계신다면, '상담문의' 버튼으로 언제든 편하게 문의주세요.",
+    thumbnail: "/images/portfolio/maintenance/mnt-011/1.jpg",
+    imageCount: 6,
+  },
+  {
     id: "mnt-010",
     category: "maintenance",
     title: "고등학교 강당 천정 보수 공사",
